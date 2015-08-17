@@ -14,8 +14,8 @@ public class Sum extends CompoundExpression {
 	@Override
 	public void accept(Visitor v) {
 		leftOperand.accept(v);
-		v.visit(this);
 		rightOperand.accept(v);
+		v.visit(this);
 	}
 
 }

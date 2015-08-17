@@ -13,8 +13,7 @@ public class Minus extends CompoundExpression {
 
 	@Override
 	public void accept(Visitor v) {
-		leftOperand.accept(v);
-		v.visit(this);
-		rightOperand.accept(v);
-	}
+		v.visit(leftOperand);
+		v.visit(rightOperand);
+		v.visit(this);	}
 }
